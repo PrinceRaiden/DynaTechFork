@@ -25,7 +25,7 @@ public class WirelessEnergyBank extends SlimefunItem implements EnergyNetCompone
     @Override
     @Nonnull
     public EnergyNetComponentType getEnergyComponentType() {
-        return EnergyNetComponentType.CAPACITOR;
+        return EnergyNetComponentType.CONSUMER;
     }
 
     @Override
