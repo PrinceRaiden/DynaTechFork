@@ -47,7 +47,7 @@ public class WirelessEnergyPoint extends SlimefunItem implements EnergyNetProvid
         this.capacity = capacity;
         this.energyRate = energyRate;
 
-        addItemHandler(onRightClick(), onBlockPlace(), onBlockBreak());
+        addItemHandler(onRightClick(), onBlockPlace());
     }
 
     @Override
@@ -129,17 +129,6 @@ public class WirelessEnergyPoint extends SlimefunItem implements EnergyNetProvid
                     
                 }   
             }
-            
-        };
-    }
-
-    private ItemHandler onBlockBreak() {
-        return new BlockBreakHandler(false, false) {
-
-			@Override
-			public void onPlayerBreak(BlockBreakEvent event, ItemStack block, List<ItemStack> drops) {
-				BlockStorage.clearBlockInfo(event.getBlock().getLocation());
-			}
             
         };
     }
